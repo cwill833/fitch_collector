@@ -21,3 +21,11 @@ class FintchCreate(CreateView):
     model = Fintch
     fields = '__all__'
     success_url = '/fintch/'
+
+class FintchUpdate(UpdateView):
+    model = Fintch
+    fields = ['breed', 'description', 'age']
+
+class FintchDelete(DeleteView):
+    model = Fintch
+    success_url = '/fintch/'
