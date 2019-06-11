@@ -18,8 +18,9 @@
                     <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Fintch Collector</a></li>
                 </ul>
                 <ul class="right">
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/fintch">View All Fintch</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'fintch_create' %}">Add Fintch</a></li>
+                    <li><a href="{% url 'index' %}">View All Fintch</a></li>
                 </ul>
             </div>
         </nav>

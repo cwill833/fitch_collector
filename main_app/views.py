@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Fintch
 # Create your views here.
 
@@ -15,3 +16,8 @@ def fintch_index(request):
 def fintch_detail(request, fintch_id):
     bird = Fintch.objects.get(id=fintch_id)
     return render(request, 'fintch/detail.html', {'bird': bird})
+
+class FintchCreate(CreateView):
+    model = Fintch
+    fields = '__all__'
+    success_url = '/fintch/'
